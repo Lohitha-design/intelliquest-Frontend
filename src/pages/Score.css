@@ -1,0 +1,100 @@
+.score-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #0D0D0D; /* Nano Black */
+  font-family: 'Segoe UI', sans-serif;
+  color: #E0E0E0; /* Soft Silver */
+  text-align: center;
+}
+
+/* Heading */
+.score-wrapper h2 {
+  color: #00F5D4; /* Electric Aqua */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(0, 245, 212, 0.7);
+}
+
+.score-wrapper p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #B8B8B8; /* Metallic Gray */
+}
+
+/* Review section */
+.review-section {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-section h3 {
+  color: #FFD60A; /* Nano Gold */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(255, 214, 10, 0.6);
+}
+
+.review-card {
+  background-color: #1A1A2E; /* Midnight Nano Blue */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(131, 56, 236, 0.4); /* Purple Glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.6); /* Pink Glow */
+}
+
+.review-card p {
+  margin: 0.5rem 0;
+  color: #E0E0E0;
+}
+
+.label {
+  font-weight: bold;
+  color: #FF006E; /* Vivid Nano Pink */
+  text-shadow: 0 0 6px rgba(255, 0, 110, 0.6);
+}
+
+/* Buttons */
+button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #8338EC; /* Nano Purple */
+  color: #FFFFFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #00BBF9; /* Neon Sky Blue */
+  box-shadow: 0 0 12px rgba(0, 187, 249, 0.6);
+}
+
+/* Dashboard button */
+.dashboard-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #FF006E; /* Vivid Nano Pink */
+  color: #FFFFFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: #FFD60A; /* Nano Gold */
+  color: #0D0D0D;
+  box-shadow: 0 0 12px rgba(255, 214, 10, 0.7);
+}

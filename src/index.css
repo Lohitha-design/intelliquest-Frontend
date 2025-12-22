@@ -1,0 +1,12 @@
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFAEBC; /* Hot Pink */
+  color: #151735; /* Ebony for text contrast */
+}

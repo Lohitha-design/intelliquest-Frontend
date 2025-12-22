@@ -1,0 +1,85 @@
+.test-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0D0D0D; /* Nano Black */
+}
+
+/* Test box styling */
+.test-box {
+  background-color: #1A1A2E; /* Midnight Nano Blue */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 245, 212, 0.4); /* Aqua Glow */
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #E0E0E0; /* Soft Silver */
+}
+
+/* Headings */
+.test-box h2 {
+  color: #FFD60A; /* Nano Gold */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 214, 10, 0.6);
+}
+
+.test-box h3 {
+  color: #00F5D4; /* Electric Aqua */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+}
+
+/* Options grid */
+.options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.options-grid button {
+  padding: 0.5rem 1rem;
+  background-color: #8338EC; /* Nano Purple */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #FFFFFF;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.options-grid button:hover {
+  background-color: #FF006E; /* Vivid Nano Pink */
+  box-shadow: 0 0 12px rgba(255, 0, 110, 0.6);
+  transform: scale(1.05);
+}
+
+.options-grid .selected {
+  background-color: #FFD60A; /* Nano Gold */
+  color: #0D0D0D;
+  box-shadow: 0 0 12px rgba(255, 214, 10, 0.7);
+}
+
+/* Submit button */
+.test-box button {
+  padding: 0.75rem 1.5rem;
+  background-color: #00BBF9; /* Neon Sky Blue */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #0D0D0D;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-box button:hover {
+  background-color: #FF006E; /* Vivid Nano Pink */
+  color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(255, 0, 110, 0.6);
+}
+button{
+  margin-right: 10px;
+}

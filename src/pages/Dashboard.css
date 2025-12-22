@@ -1,0 +1,134 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0D0D0D; /* Nano Black */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1A1A2E; /* Midnight Nano Blue */
+  padding: 2rem 1rem;
+  color: #E0E0E0; /* Soft Silver */
+  box-shadow: 2px 0 15px rgba(0, 245, 212, 0.4); /* Aqua Glow */
+  transition: all 0.3s ease;
+}
+
+.sidebar h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #FF006E; /* Vivid Nano Pink */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.sidebar li:hover {
+  color: #00F5D4; /* Electric Aqua */
+  text-shadow: 0 0 8px rgba(0, 245, 212, 0.7);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #0F0F1A; /* Deep Nano Navy */
+  overflow-y: auto;
+  box-shadow: inset 0 0 20px rgba(131, 56, 236, 0.3); /* Purple Glow */
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #FFD60A; /* Nano Gold */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 214, 10, 0.6);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #E0E0E0;
+  margin-bottom: 2rem;
+}
+
+/* Features & Coming Soon */
+.features h2,
+.coming-soon h2 {
+  font-size: 1.5rem;
+  color: #00BBF9; /* Neon Sky Blue */
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #B8B8B8; /* Soft Metallic Gray */
+  transition: color 0.3s ease;
+}
+
+.features li:hover {
+  color: #8338EC; /* Nano Purple */
+}
+
+.coming-soon p {
+  font-size: 1rem;
+  color: #AAAAAA; /* Subtle Silver */
+}
+
+/* 📱 Mobile view adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack sidebar on top */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: none;
+    border-bottom: 2px solid #00F5D4; /* Aqua divider */
+  }
+
+  .sidebar h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .sidebar li {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

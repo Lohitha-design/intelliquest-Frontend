@@ -1,0 +1,96 @@
+.questions-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #0D0D0D; /* Nano Black */
+  font-family: 'Segoe UI', sans-serif;
+  color: #E0E0E0; /* Soft Silver */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questions-wrapper h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00F5D4; /* Electric Aqua */
+  text-shadow: 0 0 12px rgba(0, 245, 212, 0.7);
+}
+
+.question-card {
+  background-color: #1A1A2E; /* Midnight Nano Blue */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(131, 56, 236, 0.4); /* Purple Glow */
+  width: 100%;
+  max-width: 700px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.6); /* Pink Glow */
+}
+
+.question-card p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #FFD60A; /* Nano Gold */
+  text-shadow: 0 0 8px rgba(255, 214, 10, 0.6);
+}
+
+.question-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.question-card li {
+  background-color: #0F0F1A; /* Deep Nano Navy */
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  color: #B8B8B8; /* Metallic Gray */
+}
+
+.question-card li:hover {
+  background-color: #8338EC; /* Nano Purple */
+  color: #FFFFFF;
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(131, 56, 236, 0.6);
+}
+
+.question-card li.selected {
+  background-color: #FF006E; /* Vivid Nano Pink */
+  border-color: #FFD60A; /* Nano Gold */
+  color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(255, 0, 110, 0.6);
+}
+
+.submit-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #00BBF9; /* Neon Sky Blue */
+  color: #0D0D0D;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #FF006E; /* Vivid Nano Pink */
+  color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(255, 0, 110, 0.6);
+}
+
+.submit-button:disabled {
+  background-color: #333333;
+  color: #777777;
+  cursor: not-allowed;
+}

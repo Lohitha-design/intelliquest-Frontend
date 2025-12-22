@@ -1,0 +1,133 @@
+.interview-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #0D0D0D; /* Deep Nano Black */
+  font-family: 'Segoe UI', sans-serif;
+  color: #E0E0E0; /* Soft Silver */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interview-wrapper h2 {
+  color: #00F5D4; /* Electric Aqua */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.interview-card {
+  background-color: #1A1A2E; /* Midnight Nano Blue */
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.4); /* Neon Glow */
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #00BBF9; /* Neon Sky Blue */
+  font-size: 1rem;
+  resize: none;
+  font-family: inherit;
+  background-color: #0F0F1A;
+  color: #E0E0E0;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #FF006E; /* Vivid Nano Pink */
+  color: #FFFFFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #8338EC; /* Nano Purple */
+  box-shadow: 0 0 12px rgba(131, 56, 236, 0.6);
+}
+
+.relevance-score {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #FFD60A; /* Nano Gold */
+  font-weight: bold;
+}
+
+.interview-complete {
+  background-color: #1A1A2E;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(255, 214, 10, 0.4); /* Golden Glow */
+  text-align: center;
+}
+
+.interview-complete p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #E0E0E0;
+}
+
+.interview-complete button {
+  margin-top: 1.5rem;
+  background-color: #00F5D4; /* Electric Aqua */
+  color: #0D0D0D;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interview-complete button:hover {
+  background-color: #FF006E; /* Vivid Nano Pink */
+  box-shadow: 0 0 12px rgba(255, 0, 110, 0.6);
+}
+
+.role-selector {
+  background-color: #0F0F1A;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 0 20px rgba(0, 187, 249, 0.4); /* Neon Blue Glow */
+}
+
+.role-selector select {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #FFD60A; /* Nano Gold */
+  background-color: #1A1A2E;
+  color: #E0E0E0;
+}
+
+.start-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #8338EC; /* Nano Purple */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #FF006E; /* Vivid Nano Pink */
+  box-shadow: 0 0 12px rgba(255, 0, 110, 0.6);
+}

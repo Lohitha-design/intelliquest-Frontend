@@ -1,0 +1,99 @@
+.register-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0D0D0D; /* Nano Black */
+}
+
+/* Register box styling */
+.register-box {
+  background-color: #1A1A2E; /* Midnight Nano Blue */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 245, 212, 0.4); /* Aqua Glow */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Heading */
+.register-box h2 {
+  color: #FFD60A; /* Nano Gold */
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 214, 10, 0.6);
+}
+
+/* Input fields */
+.register-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #00BBF9; /* Neon Sky Blue */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #0F0F1A;
+  color: #E0E0E0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-box input:focus {
+  border-color: #8338EC; /* Nano Purple */
+  box-shadow: 0 0 10px rgba(131, 56, 236, 0.6);
+  outline: none;
+}
+
+/* Register button */
+.register-box button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #FF006E; /* Vivid Nano Pink */
+  color: #FFFFFF;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-box button[type="submit"]:hover {
+  background-color: #8338EC; /* Nano Purple */
+  box-shadow: 0 0 12px rgba(131, 56, 236, 0.6);
+}
+
+/* Error & Success messages */
+.error-message {
+  color: #FF3131; /* Neon Red */
+  margin-top: 0.5rem;
+  text-shadow: 0 0 6px rgba(255, 49, 49, 0.6);
+}
+
+.success-message {
+  color: #00F5D4; /* Electric Aqua */
+  margin-top: 0.5rem;
+  text-shadow: 0 0 6px rgba(0, 245, 212, 0.6);
+}
+
+/* Login link section */
+.login-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #E0E0E0; /* Soft Silver */
+}
+
+.login-link button {
+  background-color: transparent;
+  border: none;
+  color: #00F5D4; /* Electric Aqua */
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.login-link button:hover {
+  color: #FFD60A; /* Nano Gold */
+  text-shadow: 0 0 8px rgba(255, 214, 10, 0.7);
+}
