@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { saveToken } from './utils/storage';
 import './Login.css';
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -9,10 +10,15 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (loading) return; // ⛔ prevent double tap
+
+    setLoading(true);
     setError('');
     setSuccess('');
 
@@ -27,12 +33,13 @@ function Login() {
       if (!res.ok) throw new Error(data.error || 'Login failed');
 
       setSuccess(data.message);
-      localStorage.setItem('token', data.token); // Store JWT
+      saveToken(data.token);
 
-      // Redirect to dashboard after login
-      setTimeout(() => navigate('/dashboard'), 1000);
+      setTimeout(() => navigate('/dashboard'), 800);
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -40,6 +47,7 @@ function Login() {
     <div className="login-wrapper">
       <div className="login-box">
         <h2>Login to IntelliQuest</h2>
+
         <form onSubmit={handleSubmit}>
           <input
             type="email"
@@ -48,6 +56,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+
           <input
             type="password"
             placeholder="Password"
@@ -55,18 +64,14 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Log In</button>
+
+          <button type="submit" disabled={loading}>
+            {loading ? 'Logging in…' : 'Log In'}
+          </button>
         </form>
 
         {error && <p className="error-message">{error}</p>}
         {success && <p className="success-message">{success}</p>}
-
-        <div className="register-link">
-          <span>No account? </span>
-          <button type="button" onClick={() => navigate('/register')}>
-            Register here
-          </button>
-        </div>
       </div>
     </div>
   );
