@@ -43,21 +43,42 @@ function Questions() {
     setUserAnswers(prev => ({ ...prev, [qIndex]: optIndex }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let score = 0;
     questions.forEach((q, i) => {
       if (userAnswers[i] === q.answerIndex) score++;
     });
 
+    try {
+      // Example: get userId from localStorage or context
+      const userId = localStorage.getItem('userId') || 'demoUser';
+
+      // Send responses to backend
+      await fetch(`${API_URL}/api/responses`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId,
+          role,
+          level,
+          score,
+          total: questions.length,
+          answers: questions.map((q, i) => ({
+            question: q.question,
+            userAnswer: q.options[userAnswers[i]],
+            correctAnswer: q.options[q.answerIndex],
+            relevance: userAnswers[i] === q.answerIndex ? 100 : 0
+          }))
+        })
+      });
+    } catch (err) {
+      console.error('Error saving responses:', err);
+      alert('Failed to save your quiz results.');
+    }
+
+    // Navigate to score page
     navigate('/score', {
-      state: {
-        role,
-        level,
-        score,
-        total: questions.length,
-        userAnswers,
-        questions
-      }
+      state: { role, level, score, total: questions.length, userAnswers, questions }
     });
   };
 

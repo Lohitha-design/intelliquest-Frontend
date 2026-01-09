@@ -79,12 +79,15 @@ function InterviewSession() {
     }
   };
 
+  // ✅ FIX: send to a dedicated save route with userId
   useEffect(() => {
     if (sessionComplete && responses.length > 0) {
-      fetch(`${API_URL}/api/performance`, {
+      const userId = localStorage.getItem('userId') || 'demoUser';
+
+      fetch(`${API_URL}/api/interviewResponses`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ role, responses })
+        body: JSON.stringify({ userId, role, responses })
       })
         .then(res => res.json())
         .then(data => console.log('Responses saved:', data))
